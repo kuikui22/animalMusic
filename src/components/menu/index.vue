@@ -5,21 +5,14 @@
       <button class="menu-nav_btn" type="button" @click="clickMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <ul id="menu_menu" class="nav justify-content-center">
+      <ul id="menu_main" class="nav justify-content-center">
         <li class="nav-item">
-          <a href="#">我的</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">發現</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">朋友</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">視頻</a>
+          <router-link v-for="item in mainMenu" :to="item.link" active-class="active">
+            {{item.name}}
+          </router-link>
         </li>
       </ul>
-      <button class="menu-nav_btn px-2" type="button" @click="clickMenu">
+      <button class="menu-nav_btn px-2" type="button">
         <font-awesome-icon icon="search" />
       </button>
     </nav>

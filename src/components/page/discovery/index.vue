@@ -1,6 +1,9 @@
 <template>
-  <div class="home">
+  <div class="home h-100">
     <nav-menu></nav-menu>
+    <div class="discovery">
+      discovery <br/>
+    </div>
   </div>
 </template>
 

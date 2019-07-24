@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="h-100">
     <router-view></router-view>
   </div>
 </template>
@@ -14,3 +14,6 @@ export default {
 }
 </script>
 
+<style lang="less">
+  @import url('~_assets/style/my_style.less');
+</style>
