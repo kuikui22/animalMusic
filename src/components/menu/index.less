@@ -1,0 +1,115 @@
+.menu {
+    font-size: 13px;
+    background-color: #fff;
+
+    .navbar {
+        padding: .5rem .2rem;
+    }
+    a {
+        color: #909090;
+    }
+}
+#menu_menu {
+    a {
+        padding: 5px 8px;
+    }
+}
+.menu-nav_btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.menu-nav_list {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1101;
+    .wh(280px, 100%);
+
+    a {
+        color: #000;
+        display: block;
+        text-decoration: none;
+    }
+}
+.menu-nav_list_top {
+    background-color: @gray;
+    text-align: center;
+    .wh(100%, 25%);
+}
+.mask {
+    background-color: rgba(17, 17, 17, .6);
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    z-index: 1100;
+    .wh(100%, 100%);
+}
+.nav_list-nav {
+    margin: 0 10px;
+    text-align: center;
+
+    span {
+        display: inline-block;
+        margin-top: 10px;
+        width: 25%;
+    }
+    svg {
+        color: @icon-color;
+    }
+}
+.nav_list-contain {
+    height: 98%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 10%;
+}
+.nav_list-btm{
+    background-color: #fff;
+    border-top: solid 1px @gray;
+    bottom: 0;
+    margin-bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1102;
+
+    span {
+        display: inline-block;
+        margin-top: 10px;
+        width: 33%;
+    }
+}
+.nav_list-block {
+    border-top: solid 1px @gray;
+    margin: 0 10px;
+    padding-bottom: 10px;
+
+    a {
+        padding: 5px 0;
+    }
+    svg {
+        width: 20px;
+        margin-right: 10px;
+    }
+}
+
+.slide-enter-active, .slide-leave-active {
+    transition-property: left;
+    transition-duration: .4s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+}
+.slide-enter, .slide-leave-to {
+    left: -280px;
+}
+.fade-enter-active, .fade-leave-active {
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
