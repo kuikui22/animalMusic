@@ -87,7 +87,7 @@
                     <a href="#"><font-awesome-icon icon="headphones" />在線聽歌免流量</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#"><font-awesome-icon icon="robot" />遊戲推薦</a>
+                    <a href="#"><font-awesome-icon icon="gamepad" />遊戲推薦</a>
                   </li>
                   <li class="nav-item">
                     <a href="#"><font-awesome-icon icon="money-bill-wave" />優惠券</a>
