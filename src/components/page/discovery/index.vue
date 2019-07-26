@@ -2,12 +2,7 @@
   <div class="discovery">
     <nav-menu></nav-menu>
     <div id="discovery_contain" class="discovery-contain">
-      <transition-group id="carousel" ref="carousel" tag="div" class="contain-slider" :style="carouselStyle" name="slider">
-          <img :src="getNowImg" :key="currentImg" />
-          <div class="carousel_nav" key="carousel_nav">
-            <span v-for="(num, value) in carouselImages" :class="[{active: (value === currentImg)}]"></span>
-          </div>
-      </transition-group>
+      <carousel :carouselImages="carouselImages"></carousel>
       <div class="contain-menu">
         <div>
           <a href="#">

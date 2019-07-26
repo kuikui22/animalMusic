@@ -1,6 +1,7 @@
 //see: https://jsfiddle.net/hr77p7qb/3/
 
 import navMenu from '_components/menu/index.vue';
+import carousel from '_components/carousel/index.vue';
 
 //TODO: 優化sticky,及提出為component
 //TODO: carousel 提出為component
@@ -12,10 +13,6 @@ export default {
         songList: [],
         newCD: [],
         newsList: [],
-        currentImg: 0,
-        carouselStyle: {
-          height: '40%'
-        },
         cloudNavPos: '',
         cloudSticky: false,
         cloudStyle: {
@@ -24,7 +21,8 @@ export default {
       }
     },
     components: {
-      navMenu
+      navMenu,
+      carousel
     },
     methods: {
       getSlidImg() {
@@ -63,20 +61,6 @@ export default {
           {title: 'WHALE-SHARK', img: '/images/whale_shark_p16_9.jpg', s_title: 'WHALE-SHARK', content: '', comment: '1234', great: '4567'},
         ];
       },
-      resizeStyle(event) {
-        const element = document.getElementById('carousel');
-
-        if(element) {
-          const height = element.children[0].clientHeight;
-          this.carouselStyle.height = (height + 10) +'px';
-        }
-      },
-      conversionImgScale() {
-
-        //圖片長度16 : 9
-        const WindowWidth = document.documentElement.clientWidth;
-        this.carouselStyle.height = Math.floor((WindowWidth - 10) / 16 * 9) + 'px';
-      },
       scrollSticky(event) {
         
         //TODO: 先判斷上方nav的高度,再設置sticky的top
@@ -105,21 +89,10 @@ export default {
     },
     mounted() {
       const self = this;
-      
-      self.conversionImgScale();
-
-      self.$nextTick(() => {
-        window.addEventListener('resize', self.resizeStyle);
-      });
 
       //設定sticky nav
       this.cloudNavPos = document.getElementById('cloud_tit').offsetTop;
       window.addEventListener('scroll', self.scrollSticky, true);
-
-      //定時輪播圖片
-      setInterval(() => {
-        self.currentImg = ((self.currentImg + 1) > (self.carouselImages.length - 1)) ? 0 : self.currentImg += 1;
-      }, 3000);
     },
     destroyed() {
       window.removeEventListener("resize", this.resizeStyle);
