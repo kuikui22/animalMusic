@@ -2,7 +2,7 @@
   <div class="discovery">
     <nav-menu></nav-menu>
     <div id="discovery_contain" class="discovery-contain">
-      <carousel :carouselImages="carouselImages"></carousel>
+      <carousel :carouselImages="carouselImages" :changeTime="3000"></carousel>
       <div class="contain-menu">
         <div>
           <a href="#">

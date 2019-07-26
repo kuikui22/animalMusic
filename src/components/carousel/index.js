@@ -1,6 +1,7 @@
 export default {
     props: [
-        'carouselImages'
+        'carouselImages',
+        'changeTime'
     ],
     data() {
         return {
@@ -43,7 +44,7 @@ export default {
         //定時輪播圖片
         setInterval(() => {
           self.currentImg = ((self.currentImg + 1) > (self.carouselImages.length - 1)) ? 0 : self.currentImg += 1;
-        }, 3000);
+        }, self.changeTime);
     },
     destroyed() {
         window.removeEventListener("resize", this.resizeStyle);
