@@ -1,5 +1,213 @@
 .discovery {
     height: 100%;
-    padding-top: 40px;
-    overflow: auto;
+}
+.discovery-contain {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 50px;
+
+}
+.contain-slider {
+    overflow: hidden;
+    position: relative;
+    .wh(100%, 40%);
+
+    img {
+        border-radius: 5px;
+        bottom: 0;
+        height: auto;
+        left: 0;
+        margin: 0 3%;
+        position: absolute;
+        right:0;
+        top: 0;
+        width: 94%;
+        display: block;
+    }
+}
+.carousel_nav {
+  bottom: 5.5%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+
+  span {
+    background-color: rgba(160, 160, 160, .6);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 .5%;
+    .wh(7px, 7px);
+  }
+  .active {
+    background-color: rgba(255, 29, 18, .6);
+  } 
+}
+.contain-menu {
+  font-size: 12px;
+  border-bottom: solid 1px @gray;
+
+  div {
+    display: inline-block;
+    padding: 10px 5px;
+    text-align: center;
+    width: 20%;
+  }
+  a {
+    color: #000;
+    display: block;
+  }
+  span {
+    background: -webkit-linear-gradient(right, rgb(255, 29, 18),rgb(253, 132, 120));
+    background: -o-linear-gradient(right, rgb(255, 29, 18),rgb(253, 132, 120));
+    background: -moz-linear-gradient(right, rgb(255, 29, 18),rgb(253, 132, 120));
+    background: linear-gradient(right, rgb(255, 29, 18),rgb(255, 132, 120));
+    display: block;
+    line-height: 46px;
+    margin: 0 auto;
+    .wh(40px, 40px);
+  }
+  svg {
+    font-size: 20px;
+    color: #fff;
+  }
+  p {
+    padding: 3px 0;
+    margin-bottom: 0;
+  }
+}
+.contain-block {
+  padding: 10px 3%;
+  word-break: break-all;
+  font-size: 12px;
+
+  h5 {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  small {
+    border-radius: 40px;
+    border: solid 1px @gray;
+    float: right;
+    padding: 0 5px;
+  }
+  .row {
+    margin: 0 -5px;
+  }
+  .col-4 {
+    padding: 0 5px;
+  }
+}
+.contain-block_1 {
+  border-top: solid 6px @gray;
+  padding: 10px 0;
+  word-break: break-all;
+  font-size: 12px;
+
+  h5 {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  small {
+    float: right;
+    padding: 0 5px;
+
+    svg {
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH; /*IE*/
+      padding: 1px;
+      margin-right: 1px;      
+    }
+  }
+  .block-title {
+    border-bottom: solid 1px @gray;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+  .block_s {
+    padding: 5px 3%;
+
+    p {
+      margin-bottom: 8px;
+    }
+  }
+  .row {
+    margin: 0 -5px;
+  }
+}
+.block_font {
+  color: rgb(160, 159, 159);
+}
+.block-mask {
+  background: -webkit-linear-gradient(rgba(102, 102, 102, .3),rgba(196, 196, 196, 0));
+  background: -o-linear-gradient(rgba(102, 102, 102, .3),rgba(196, 196, 196, 0));
+  background: -moz-linear-gradient(rgba(102, 102, 102, .3),rgba(196, 196, 196, 0));
+  background: linear-gradient(rgba(102, 102, 102, .3),rgba(196, 196, 196, 0));
+  color: #fff;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  svg {
+    padding: 2px 0 2px 2px;
+  }
+}
+.block-content {
+  color: #000;
+  border: solid 1px @gray;
+  border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 5px;
+
+  img {
+    .wh(100%, auto);
+  }
+}
+.bg_gray {
+  background-color: @gray;
+}
+.block-great,
+.block-comment {
+  float: left;
+  padding-right: 10px;
+}
+.block-menu {
+  float: right;
+}
+.border-b {
+  border-bottom: solid 5px @gray;
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 38px;
+  background-color: #fff;
+  z-index: 3;
+}
+.sticky + div {
+  padding-top: 10px;
+}
+
+.slider-leave-active,
+.slider-enter-active {
+  transition-property: all;
+  transition-duration: .4s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;;
+}
+.slider-enter {
+  transform: translate(100%, 0);
+}
+.slider-leave-to {
+  transform: translate(-100%, 0);
 }

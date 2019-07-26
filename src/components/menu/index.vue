@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-white fixed-top">
+    <nav id="menu_top_nav" class="navbar navbar-expand-sm navbar-light bg-white fixed-top">
       <button class="menu-nav_btn" type="button" @click="clickMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
