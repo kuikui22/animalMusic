@@ -3,8 +3,8 @@
 import navMenu from '_components/menu/index.vue';
 import carousel from '_components/carousel/index.vue';
 
-//TODO: 優化sticky,及提出為component
-//TODO: carousel 提出為component
+//TODO: sticky 提出為component (?)
+//TODO: carousel 需新增touch換圖事件
 
 export default {
     data() {
@@ -62,23 +62,20 @@ export default {
         ];
       },
       scrollSticky(event) {
-        
-        //TODO: 先判斷上方nav的高度,再設置sticky的top
         const mainElement = document.getElementById('discovery_contain');
-        const navElement = document.getElementById('menu_top_nav');        
+        const navElement = document.getElementById('menu_top_nav');  
 
-        if(mainElement.scrollTop > this.cloudNavPos) {
+        //取得sticky element 位置
+        if(!this.cloudNavPos) {
+          this.cloudNavPos = document.getElementById('cloud_tit').offsetTop;
+        }
+
+        //判斷上方nav的高度(含css padding等值)
+        if((mainElement.scrollTop + navElement.clientHeight + 10) > this.cloudNavPos) {
           this.cloudSticky = true;
-
-          // element.style.top = navElement.clientHeight;
         } else {
           this.cloudSticky = false;
         }
-      }
-    },
-    computed: {
-      getNowImg() {
-        return this.carouselImages[Math.abs(this.currentImg) % this.carouselImages.length];
       }
     },
     created() {
@@ -91,7 +88,6 @@ export default {
       const self = this;
 
       //設定sticky nav
-      this.cloudNavPos = document.getElementById('cloud_tit').offsetTop;
       window.addEventListener('scroll', self.scrollSticky, true);
     },
     destroyed() {
