@@ -91,6 +91,6 @@ export default {
       window.addEventListener('scroll', self.scrollSticky, true);
     },
     destroyed() {
-      window.removeEventListener("resize", this.resizeStyle);
+      window.removeEventListener('scroll', this.scrollSticky, true);
     }
   }

@@ -38,7 +38,6 @@ export default {
             ];
         },
         changeListShow() {
-            console.log(11);
             this.showList = !this.showList;
         }
     },
