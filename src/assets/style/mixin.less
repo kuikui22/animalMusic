@@ -5,3 +5,13 @@
     width: @width;
     height: @height;
 }
+.border-bt() {
+    border-bottom: solid 5px @gray;
+}
+.icon_span(@color1, @color2, @radius) {
+    background: -webkit-linear-gradient(right, @color1, @color2);
+    background: -o-linear-gradient(right, @color1, @color2);
+    background: -moz-linear-gradient(right, @color1, @color2);
+    background: linear-gradient(right, @color1 ,@color2);
+    border-radius: @radius;
+}

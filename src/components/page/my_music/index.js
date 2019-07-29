@@ -4,6 +4,8 @@ export default {
     data() {
         return {
             myMusicMenu: [],
+            recommendList: [],
+            showList: true
         }
     },
     components: {
@@ -24,10 +26,25 @@ export default {
                 { name: '小冰電台', iconName: 'bacon' },
                 { name: '爵士電台', iconName: 'drum' }
             ];
+        },
+        getRecommendList() {
+            this.recommendList = [
+                { title: 'SQUIRREL', img: 'images/squirrel_p1_1.jpg' },
+                { title: 'DOLPHIN', img: 'images/dolphin_p1_1.jpg' },
+                { title: 'WHITE-FOX', img: 'images/White-fox_p1_1.jpg' },
+                { title: 'SALAMANDER', img: 'images/salamander_p1_1.jpg' },
+                { title: 'CAT', img: 'images/cat_p1_1.jpg' },
+                { title: 'LEOPARD', img: 'images/leopard_p1_1.jpg' }
+            ];
+        },
+        changeListShow() {
+            console.log(11);
+            this.showList = !this.showList;
         }
     },
     created() {
         this.getMyMusicMenu();
+        this.getRecommendList();
     },
     mounted() {
 
