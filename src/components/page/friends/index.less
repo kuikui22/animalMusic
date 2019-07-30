@@ -1,0 +1,86 @@
+.friends {
+    height: 100%;
+}
+.friends-contain {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 50px;
+}
+.friends-block {
+    padding: 10px;
+
+    .title {
+        position: relative;
+        font-size: 13px;
+
+        img {
+            border-radius: 50%;
+            margin-right: 5px;
+            .wh(30px, 30px);
+        }
+        div {
+            display: inline-block;            
+        }
+        .name {
+            color: rgb(68, 110, 247);
+            margin-bottom: 0;
+        }
+        .attention {
+            position: absolute;
+            right: 0px;
+            top: 5px;
+            border-radius: 10px;
+            background-color: @icon-color;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 5px;
+        }
+        .media-body small {
+            font-size: 12px;
+            display: block;
+            color: #a09f9f;
+        }
+    }
+    .content {
+        font-size: 13px;
+        margin-left: 35px;
+        padding-bottom: 5px;
+
+        img {
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+    .music {
+        font-size: 13px;
+        padding-left: 35px;
+
+        img {
+            border-radius: 5px;
+            margin: 0 5px;            
+            .wh(30px, 30px);
+        }
+        small {
+            display: block;
+            color: #a09f9f;
+        }
+        .media {
+            background-color: @gray;
+            border-radius: 5px; 
+        }
+    }
+    .bottom_info {
+        font-size: 12px;
+        padding: 10px 0  0 35px;
+
+        div {
+            display: inline-block;
+            padding-right: 10px;
+        }
+    }
+    
+}
+.friends-block_border {
+    border-bottom: solid 1px @gray;
+}
