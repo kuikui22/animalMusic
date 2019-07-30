@@ -86,7 +86,7 @@
                 </div>  
               </div>
             </transition> 
-            <div class="create_cut"><font-awesome-icon icon="hand-peace" />&nbsp;截圖導入歌單</div>
+            <div class="create_cut"><font-awesome-icon icon="cut" />&nbsp;截圖導入歌單</div>
           </div>
 
           <div class="music-recommend">
