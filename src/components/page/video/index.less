@@ -1,0 +1,68 @@
+.video {
+    height: 100%;
+}
+.video-contain {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 50px;
+}
+.video-menu {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-bottom: solid 1px @gray;
+    white-space: nowrap;
+
+    a {
+        font-size: 12px;
+        display: inline-block;
+        padding: 0 10px;
+    }
+    a.active {
+        color: @icon-color;
+        font-weight: bold;
+    }
+    a.active span {
+        border-bottom: solid 2px @icon-color;
+        display: block;
+        margin: 0 auto;
+        max-width: 23px;
+    }
+}
+.video-block {
+    padding: 10px;
+    font-size: 14px;
+
+    .title {
+        margin-bottom: 10px;
+        border-bottom: 1px solid @gray;
+    }
+    .title img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .title p {
+        margin: 10px 0;
+    }
+    .content img {
+        width: 25px;
+        border-radius: 50%;
+    }
+    span {
+        font-size: 12px;
+        display: inline-block;
+    }
+}
+.icon_group {
+    color: #a09f9f;
+    float: right;
+    text-align: right;
+
+    span {
+        margin-left: 10px;
+    }
+}
+.video-block_border {
+    border-bottom: solid 8px @gray;
+}
