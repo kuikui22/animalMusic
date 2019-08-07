@@ -1,3 +1,5 @@
+import { debounce } from '@/services/utils.js';
+
 export default {
     props: [
         'carouselImages',
@@ -13,8 +15,9 @@ export default {
     },
     methods: {
         resizeStyle(event) {
+            // console.log(1,event);
             const element = document.getElementById('carousel');
-    
+
             if(element) {
               const height = element.children[0].clientHeight;
               this.carouselStyle.height = (height + 10) +'px';
@@ -38,7 +41,7 @@ export default {
         self.conversionImgScale();
 
         self.$nextTick(() => {
-          window.addEventListener('resize', self.resizeStyle);
+          window.addEventListener('resize', debounce(self.resizeStyle, 350));
         });
   
         //定時輪播圖片
