@@ -1,5 +1,7 @@
 # sample_mobile
 用vue.js製作的手機demo, 配色及版面模仿網易雲音樂App, 圖片來自於網路上的動物圖片.
+Demo: https://kuikui22.github.io/sideProject_demo/VueJs/animalMusic/
+
 * 目前僅實作 "我的"、"發現"、"朋友"、"視頻"展示頁面, 其餘功能尚未實作.
 * 此專案使用yarn管理
 
