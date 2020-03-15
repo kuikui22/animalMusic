@@ -27,38 +27,38 @@ export default {
     methods: {
       getSlidImg() {
         this.carouselImages = [
-          '/images/lion_p16_9.jpg',
-          '/images/whale_shark_p16_9.jpg',
-          '/images/squirrel_p16_9.jpg',
-          '/images/shark_p16_9.jpg',
-          '/images/White-fox_p16_9.jpg',
+          'images/lion_p16_9.jpg',
+          'images/whale_shark_p16_9.jpg',
+          'images/squirrel_p16_9.jpg',
+          'images/shark_p16_9.jpg',
+          'images/White-fox_p16_9.jpg',
         ];
       },
       getDataSongList() {
         //由server取得的資料顯示筆數
         this.songList = [
-          {img: '/images/cat_p1_1.jpg', title: 'CAT | 精選曲目', playTimes: '12萬'},
-          {img: '/images/dog_p1_1.jpg', title: 'DOG | 精選曲目', playTimes: '12萬'},
-          {img: '/images/tiger_p1_1.jpg', title: 'TIGER | 精選曲目', playTimes: '12萬'},
-          {img: '/images/fox_p1_1.jpg', title: 'FOX | 精選曲目', playTimes: '12萬'},
-          {img: '/images/owl_p1_1.jpg', title: 'OWL | 精選曲目', playTimes: '12萬'},
-          {img: '/images/salamander_p1_1.jpg', title: 'SALAMANDER | 精選曲目', playTimes: '12萬'},
+          {img: 'images/cat_p1_1.jpg', title: 'CAT | 精選曲目', playTimes: '12萬'},
+          {img: 'images/dog_p1_1.jpg', title: 'DOG | 精選曲目', playTimes: '12萬'},
+          {img: 'images/tiger_p1_1.jpg', title: 'TIGER | 精選曲目', playTimes: '12萬'},
+          {img: 'images/fox_p1_1.jpg', title: 'FOX | 精選曲目', playTimes: '12萬'},
+          {img: 'images/owl_p1_1.jpg', title: 'OWL | 精選曲目', playTimes: '12萬'},
+          {img: 'images/salamander_p1_1.jpg', title: 'SALAMANDER | 精選曲目', playTimes: '12萬'},
         ];
       },
       getDataNewCD() {
         this.newCD = [
-          {img: '/images/leopard_p1_1.jpg', title: 'LEOPARD', author: '熱門單曲'},
-          {img: '/images/gray-wolf_p1_1.jpg', title: 'GRAY_WOLF', author: '熱門單曲'},
-          {img: '/images/dolphin_p1_1.jpg', title: 'DOLPHIN', author: '熱門單曲'},
+          {img: 'images/leopard_p1_1.jpg', title: 'LEOPARD', author: '熱門單曲'},
+          {img: 'images/gray-wolf_p1_1.jpg', title: 'GRAY_WOLF', author: '熱門單曲'},
+          {img: 'images/dolphin_p1_1.jpg', title: 'DOLPHIN', author: '熱門單曲'},
         ];
       },
       getDataNews() {
         this.newsList = [
-          {title: 'SHARK', img: '/images/shark_p16_9.jpg', s_title: 'SHARK', content: '', comment: '1234', great: '4567'},
-          {title: 'LION', img: '/images/lion_p16_9.jpg', s_title: 'LION', content: '', comment: '1234', great: '4567'},
+          {title: 'SHARK', img: 'images/shark_p16_9.jpg', s_title: 'SHARK', content: '', comment: '1234', great: '4567'},
+          {title: 'LION', img: 'images/lion_p16_9.jpg', s_title: 'LION', content: '', comment: '1234', great: '4567'},
           {title: 'test empty', img: '', s_title: 'test empty', content: 'test empty title, this is content', comment: '1234', great: '4567'},
-          {title: 'WHITE-FOX', img: '/images/White-fox_p16_9.jpg', s_title: 'WHITE-FOX', content: '', comment: '1234', great: '4567'},
-          {title: 'WHALE-SHARK', img: '/images/whale_shark_p16_9.jpg', s_title: 'WHALE-SHARK', content: '', comment: '1234', great: '4567'},
+          {title: 'WHITE-FOX', img: 'images/White-fox_p16_9.jpg', s_title: 'WHITE-FOX', content: '', comment: '1234', great: '4567'},
+          {title: 'WHALE-SHARK', img: 'images/whale_shark_p16_9.jpg', s_title: 'WHALE-SHARK', content: '', comment: '1234', great: '4567'},
         ];
       },
       scrollSticky(event) {
